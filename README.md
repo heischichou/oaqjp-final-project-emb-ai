@@ -1,41 +1,31 @@
-Emotion Detection Application
-Project Name
+# Emotion Detection Application using Flask and IBM Watson NLP
+This project is a web-based emotion detection application that analyzes text statements and identifies the emotions expressed in the text.
 
-Emotion Detection from Text using Flask and IBM Watson NLP
+The application detects the following emotions:
 
-Project Description
+- Anger
+- Disgust
+- Fear
+- Joy
+- Sadness
 
-This project is a web-based emotion detection application that analyzes a given text statement and identifies the emotions expressed in the text.
-
-The application uses an emotion detection service to determine the following emotions:
-
-Anger
-
-Disgust
-
-Fear
-
-Joy
-
-Sadness
-
-The application also identifies the dominant emotion, which is the emotion with the highest confidence score.
+It also identifies the dominant emotion, which is the emotion with the highest confidence score.
 
 Features
 
-Accepts text input from users through a web interface.
+Accepts text input from users through a web interface
 
-Analyzes the text for five different emotions.
+Analyzes text for five different emotions
 
-Determines the dominant emotion.
+Determines the dominant emotion
 
-Displays the emotion confidence scores.
+Displays emotion confidence scores
 
-Provides error handling for blank user input.
+Handles blank user input
 
-Returns None values when the emotion detection service returns HTTP status code 400.
+Returns None values when the emotion detection service returns HTTP status code 400
 
-Includes unit tests for the emotion detection function.
+Includes unit tests for the emotion detection function
 
 Project Structure
 final_project/
@@ -55,7 +45,7 @@ For the statement:
 I love my life
 
 
-the application returns emotion scores similar to:
+The application returns emotion scores similar to:
 
 {
     "anger": 0.006274985,
@@ -67,7 +57,7 @@ the application returns emotion scores similar to:
 }
 
 
-The application displays the result in the following format:
+The response is displayed as:
 
 For the given statement, the system response is 'anger': 0.006274985, 'disgust': 0.0025598293, 'fear': 0.009251528, 'joy': 0.9680386 and 'sadness': 0.049744144. The dominant emotion is joy.
 
@@ -78,12 +68,12 @@ The application handles blank input from users.
 If the emotion detection service returns an HTTP 400 status code, the emotion_detector() function returns:
 
 {
-    "anger": None,
-    "disgust": None,
-    "fear": None,
-    "joy": None,
-    "sadness": None,
-    "dominant_emotion": None
+    "anger": null,
+    "disgust": null,
+    "fear": null,
+    "joy": null,
+    "sadness": null,
+    "dominant_emotion": null
 }
 
 Unit Testing
@@ -104,7 +94,7 @@ I am really afraid that this will happen	fear
 
 The blank-input case is also tested to verify the error-handling behavior.
 
-Run the tests with:
+Run the unit tests with:
 
 python -m unittest test_emotion_detection.py
 
@@ -120,7 +110,7 @@ The application runs on:
 http://localhost:5000
 
 
-The application can then be accessed through a web browser.
+Open the URL in a web browser to use the application.
 
 Technologies Used
 
@@ -130,7 +120,7 @@ Flask
 
 HTML
 
-IBM Watson NLP emotion detection service
+IBM Watson NLP Emotion Detection
 
 Requests
 
